@@ -1,11 +1,14 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+//https://flaviocopes.com/cors/
+//https://medium.com/@alexishevia/using-cors-in-express-cac7e29b005b
+var cors = require('cors');
 
 const app = express();
 
-
-mongoose.connect('mongodb+srv://dbUser:MongoDBAdmin2020@prueba-m5hwc.mongodb.net/test?retryWrites=true&w=majority', {
+//nombre de la base de datos
+mongoose.connect('mongodb+srv://dbUser:MongoDBAdmin2020@prueba-m5hwc.mongodb.net/ERP_DB?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 }).then(db => console.log("DB is connected"))
@@ -15,6 +18,7 @@ mongoose.connect('mongodb+srv://dbUser:MongoDBAdmin2020@prueba-m5hwc.mongodb.net
 app.set('port', process.env.PORT || 3000);
 
 //Middlewares
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 

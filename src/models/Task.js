@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const Task = new Schema({
-    nombre: String,
-    apellido: String
+    title: String,
+    description: String
 });
-
-module.exports = mongoose.model('Task', Task);
+//nombre de la colección
+module.exports = mongoose.model('empleados', Task);

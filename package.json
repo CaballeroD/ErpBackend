@@ -19,9 +19,13 @@
   },
   "homepage": "https://github.com/CaballeroD/ErpBackend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.8.11",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.5"
   }
 }
