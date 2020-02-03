@@ -1,10 +1,11 @@
 {
-  "name": "ERP_Backend",
+  "name": "erp_backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/CaballeroD/ErpBackend#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
   }
 }
