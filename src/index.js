@@ -24,7 +24,7 @@ app.use(express.json());
 
 //Routes
 //Añade al principio tasks para que dentro del fichero tasks no haya que escribirlo muchas veces
-app.use('/tasks', require('./routes/tasks'));
+app.use('/pedidos', require('./routes/pedidos'));
 
 //Static files
 //Esta es la ruta de donde coge el frontend
