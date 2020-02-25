@@ -6,4 +6,4 @@ const Pedido = new Schema({
     fecha: String,
 });
 //nombre de la colección
-module.exports = mongoose.model('empleados', Pedido);
+module.exports = mongoose.model('pedidos', Pedido);
