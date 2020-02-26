@@ -10,7 +10,8 @@ const app = express();
 //nombre de la base de datos
 mongoose.connect('mongodb+srv://dbUser:MongoDBAdmin2020@prueba-m5hwc.mongodb.net/ERP_DB?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useFindAndModify: false
 }).then(db => console.log("DB is connected"))
     .catch(err => console.error(err));
 

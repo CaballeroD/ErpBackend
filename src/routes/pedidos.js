@@ -25,7 +25,7 @@ router.put('/:id', async (req, res) => {
     });
 
 })
-router.delete('/:deleteall', async (req, res) => {
+router.delete('/deleteall', async (req, res) => {
 
     await Pedido.deleteMany({}, function (err) { });
     res.json({
