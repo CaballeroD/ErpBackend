@@ -27,6 +27,7 @@ app.use(express.json());
 //Añade al principio tasks para que dentro del fichero tasks no haya que escribirlo muchas veces
 app.use('/pedidos', require('./routes/pedidos'));
 app.use('/pedidosRecibidos', require('./routes/pedidosRecibidos'));
+app.use('/pedidosArchivados', require('./routes/pedidosArchivados'));
 app.use('/articulos', require('./routes/articulos'));
 app.use('/empleados', require('./routes/empleados'));
 
