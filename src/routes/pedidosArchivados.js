@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
+
     console.log(req.body);
     const pedido = new PedidosArchivados(req.body);
     console.log(pedido);

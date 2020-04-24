@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const Empleado = require('../models/Empleado')
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const Empleadito = new Schema({
+    nombre: String
+});
 
 router.get('/', async (req, res) => {
     const empleados = await Empleado.find();
@@ -10,8 +15,10 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     console.log(req.body);
+    let coleccion = req.body.usuario
+    const Empleado = mongoose.model(coleccion + '--empleados', Empleadito);
     const empleado = new Empleado(req.body);
-    console.log(empleado);
+
     await empleado.save();
     res.json({
         status: 'empleados Saved'
