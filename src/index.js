@@ -17,6 +17,7 @@ mongoose.connect(process.env.DB_URL, {
     .catch(err => console.error(err));
 
 //Settings
+console.log("prueba")
 app.set('port', process.env.PORT || 3000);
 
 //Middlewares
