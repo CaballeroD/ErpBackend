@@ -9,7 +9,7 @@ var cors = require('cors');
 
 const app = express();
 
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect("mongodb+srv://dbUser:vvJIkZ9VUX9naQYo@prueba-m5hwc.mongodb.net/ERP_DB?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify: false
