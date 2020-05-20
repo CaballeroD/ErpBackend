@@ -9,7 +9,7 @@ var cors = require('cors');
 
 const app = express();
 
-mongoose.connect("mongodb+srv://dbUser:vvJIkZ9VUX9naQYo@prueba-m5hwc.mongodb.net/ERP_DB?retryWrites=true&w=majority", {
+mongoose.connect("noquieroconectarm", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useFindAndModify: false
@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://dbUser:vvJIkZ9VUX9naQYo@prueba-m5hwc.mongodb.net
 
 //Settings
 //se ha cambiado de 3000 a 1234 para nginx
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3000);
 
 //Middlewares
 app.use(cors());
