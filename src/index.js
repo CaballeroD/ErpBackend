@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://dbUser:vvJIkZ9VUX9naQYo@prueba-m5hwc.mongodb.net
 
 //Settings
 //se ha cambiado de 3000 a 1234 para nginx
-app.set('port', process.env.PORT || 1234);
+app.set('port', process.env.PORT || 3000);
 
 //Middlewares
 app.use(cors());
