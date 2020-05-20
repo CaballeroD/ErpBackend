@@ -17,8 +17,8 @@ mongoose.connect(process.env.DB_URL, {
     .catch(err => console.error(err));
 
 //Settings
-console.log("prueba")
-app.set('port', process.env.PORT || 3000);
+//se ha cambiado de 3000 a 1234 para nginx
+app.set('port', process.env.PORT || 1234);
 
 //Middlewares
 app.use(cors());
