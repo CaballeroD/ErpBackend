@@ -17,8 +17,8 @@ mongoose.connect(process.env.VUE_APP_DB_URL, {
     .catch(err => console.error(err));
 
 //Settings
-//se ha cambiado de 3000 a 1234 para nginx
-app.set('port', 3000);
+
+app.set('port', VUE_APP_PORT);
 
 //Middlewares
 app.use(cors());
