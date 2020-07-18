@@ -18,7 +18,7 @@ mongoose.connect(process.env.VUE_APP_DB_URL, {
 
 //Settings
 
-app.set('port', VUE_APP_PORT);
+app.set('port', process.env.VUE_APP_PORT);
 
 //Middlewares
 app.use(cors());
